@@ -18,5 +18,5 @@ npm run build
 npm run build --report
 ```
 ## 相关地址说明
-    <br/>http://localhost:8080/#/table    当前页的记忆分页表格
-    <br/>http://localhost:8080/#/choose   组件弹窗选择记忆分页
+    http://localhost:8080/#/table    当前页的记忆分页表格
+    http://localhost:8080/#/choose   组件弹窗选择记忆分页
