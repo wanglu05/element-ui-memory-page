@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import dialogTable from './dialogTable'
+import dialogTable from './ChooseDialogTalbe'
 export default {
   data() {
     return {

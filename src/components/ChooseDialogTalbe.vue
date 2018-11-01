@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "hello-dialog-talbe",
+  name: "ChooseDialogTalbe",
 	props: ["title", "checkedData"],
   data() {
     return {
