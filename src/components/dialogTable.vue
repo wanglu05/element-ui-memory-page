@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <el-button style="float:left;" type="primary" @click="handleChooseData">{{title}}</el-button>
+    <el-button style="float:left;" size="small" type="primary" @click="handleChooseData">{{title}}</el-button>
 		<el-dialog title="客户选择" :visible.sync = "dialogVisible" size="large">
       <el-button style="float:left;" type="primary" @click="handleClearData">清空所有</el-button>
       <el-button style="float:left;" type="primary" @click="handleAddData">添加选中的</el-button>
@@ -171,6 +171,7 @@ export default {
   watch: {
     'checkedData' : {
        handler(val) {
+         // 转换一下目的是为了不被同步
         this.multipleSelectionAll = JSON.parse(JSON.stringify(val));
       },
       immediate: true,

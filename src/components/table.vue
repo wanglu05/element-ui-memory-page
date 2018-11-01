@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button style="float:left;" type="primary" @click="handleChooseData">获取选中的内容</el-button>
+    <el-button style="float:left;" type="primary" size="small" @click="handleChooseData">获取选中的内容</el-button>
     <el-table :data="tableData" ref="table" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="personName" label="客户名称"></el-table-column>
@@ -40,8 +40,11 @@ export default {
     handleChooseData () {
       // 获取之前需要执行一遍记忆分页处理
       this.changePageCoreRecordData();
-      alert(`选中条数为:${this.multipleSelectionAll.length}`)
-      alert(JSON.stringify(this.multipleSelectionAll))
+       this.$alert(`选中条数为:${this.multipleSelectionAll.length}`, '提示', { confirmButtonText: '确定',
+          callback: action => {
+            alert(JSON.stringify(this.multipleSelectionAll));
+          }
+        });
     },
     // 设置选中的方法
     setSelectRow() {
