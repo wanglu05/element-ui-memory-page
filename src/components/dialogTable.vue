@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <el-button style="float:left;" size="small" type="primary" @click="handleChooseData">{{title}}</el-button>
-		<el-dialog title="客户选择" :visible.sync = "dialogVisible" size="large">
-      <el-button style="float:left;" type="primary" @click="handleClearData">清空所有</el-button>
-      <el-button style="float:left;" type="primary" @click="handleAddData">添加选中的</el-button>
+		<el-dialog title="客户选择" :visible.sync = "dialogVisible" width="80%">
+      <el-button style="float:left;" size="small" type="primary" @click="handleClearData">清空所有</el-button>
+      <el-button style="float:left;" size="small" type="primary" @click="handleAddData">添加选中的</el-button>
         <el-table :data="tableData" ref="table" @selection-change="handleSelectionChange">
         <el-table-column type="selection"></el-table-column>
         <el-table-column prop="personName" label="客户名称"></el-table-column>
