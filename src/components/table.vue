@@ -1,6 +1,7 @@
 <template>
   <div>
     <el-button style="float:left;" type="primary" size="small" @click="handleChooseData">获取选中的内容</el-button>
+    <el-button style="float:left;" type="primary" size="small" @click="$router.push({path: '/choose'})">组件弹窗选择</el-button>
     <el-table :data="tableData" ref="table" @selection-change="handleSelectionChange">
       <el-table-column type="selection"></el-table-column>
       <el-table-column prop="personName" label="客户名称"></el-table-column>
